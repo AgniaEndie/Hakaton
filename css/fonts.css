@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @font-face {
 	font-family: 'Impact';
 	src: url('gulp/Impact.eot');
@@ -8,15 +7,4 @@
 		url('fonts/Impact.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-=======
-@font-face {
-	font-family: 'Impact';
-	src: url('gulp/Impact.eot');
-	src: local('Impact'),
-		url('fonts/Impact.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Impact.woff') format('woff'),
-		url('fonts/Impact.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
->>>>>>> origin/master
 }

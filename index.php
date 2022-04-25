@@ -4,6 +4,15 @@ require_once ("core/databases/dbconfig.php");
 
 <head>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +22,88 @@ require_once ("core/databases/dbconfig.php");
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <?php
-    require_once ('header.php');
-    ?>
-    <?php
-    require_once("content/main/main_page.html");
-    ?>
-    <?php
-    require_once ("footer.php");
-    ?>
+    <header class="header">
+        <div class="header__menu">
+        <div class="container">
+            <img src="icons/Logo.svg" alt="логотип" class="col-md-1 mt-2 header__logo">
+            <button class="offset-md-7 col-md-2 button" onclick="window.location.href='#reg'">
+                Регистрация
+            </button>
+            <button class="col-md-2 button" onclick="window.location.href='#authing'">
+                Вход
+            </button>
+        </div>
+    </div>
+    </header>
+    <section class="promo">
+        <div class="container">
+            <div class="promo__wrapper">
+                <div class="promo__title">Улучши свои навыки<br> 
+                    программирования!</div>
+                <div class="promo__subtitle">
+                    Решай<br> 
+                    с тысячами людьми<br>
+                    со всего мира <br>
+                    задачи разного <br>
+                    уровня сложности
+                </div>
+                <button class="button button_big">
+                    Начать решать
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container">
+            <h2 class="title">Почему выбирают нас?</h2>
+        <div class="row">
+            <div class="col-md-4 advantages__item">
+                <img src="icons/advantages/1.svg" alt="Качество" class="advantages__img">
+                    <div class="advantages__subtitle">Качество</div>
+                    <div class="advantages__text">
+                        Автоматическая и ручная<br> 
+                        проверка ответов на тесты от<br>
+                        наших участников. Все тесты<br> 
+                        проверяются модерацией на<br> 
+                        предмет неточностей и ошибок
+                    </div>
+            </div>
+            <div class="col-md-4 advantages__item">
+                <img src="icons/advantages/2.svg" alt="Простота" class="advantages__img" style="width: 70%;">
+                    <div class="advantages__subtitle">Простота</div>
+                    <div class="advantages__text">
+                        Решать тесты легко - читаешь<br> 
+                        задание, делаешь код и<br> 
+                        отправляешь на тест. Наш сайт<br> 
+                        сразу же отобразить<br> 
+                        работоспособность кода
+                    </div>
+            </div>
+            <div class="col-md-4 advantages__item">
+                <img src="icons/advantages/3.svg" alt="Удобство" class="advantages__img">
+                    <div class="advantages__subtitle">Удобство</div>
+                    <div class="advantages__text">
+                        Можете решать тесты везде -<br> 
+                        дома, в дороге, на учебе.
+                    </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <section style="min-height: 535px;">
+
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <a class="col-md-1 footer__text">Главная</a>
+            <a class="col-md-1 footer__text">Тесты</a>
+            <a class="col-md-1 footer__text">Теория</a>
+            <a class="offset-7 col-md-2 footer__text">Made by Свет</a>
+            </div>
+        </div>
+    </footer>
 
     <?php
 //Registration
