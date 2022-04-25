@@ -206,21 +206,14 @@ require_once ("core/databases/dbconfig.php");
                 <input type="password" name="password" placeholder="Пароль">
                 <input type="submit" value="Войти" name="auth" class="button button_big">
                 <a href="#" style="margin-top: 20px;">Закрыть</a>
+                <div class="g-recaptcha" data-sitekey="6Lfg5JofAAAAANECO5ufRR2vDKcfMkJ31fOFuhbG" style="margin-bottom: 1em"></div>
             </form>
         </div>
     </section>
+
+    
 </body>
 </html>
-
-<<<<<<< HEAD
-=======
-<form action="index.php" method="post" id="auth">
-    <input type="text" name="username">
-    <input type="password" name="password">
-    <input type="submit" value="Войти" name="auth">
-    <div class="g-recaptcha" data-sitekey="6Lfg5JofAAAAANECO5ufRR2vDKcfMkJ31fOFuhbG" style="margin-bottom: 1em"></div>
-</form>
->>>>>>> 2084e02e30b240bdc2bc0bc5623e2da1e2332795
 <?php
     }
         ?>
