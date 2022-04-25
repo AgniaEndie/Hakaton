@@ -6,8 +6,8 @@ session_start();
  */
 
 $host = 'localhost';
-$user = "endienasg";
-$password = "Quantum228";
+$user = "";
+$password = "";
 $base = "hakaton";
 
 $connect = mysqli_connect($host,$user,$password,$base);
