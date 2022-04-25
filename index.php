@@ -28,6 +28,7 @@ require_once ("core/databases/dbconfig.php");
             }
             //$result = mysqli_query($connect,$query);
             //echo $query;
+            //aa
         }
 
 

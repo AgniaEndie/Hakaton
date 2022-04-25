@@ -6,6 +6,7 @@ if($_SESSION['user'] != null){
 ?>
 
 <?php
+    //exit
     if($_POST['exit'] == "Выйти из аккаунта"){
         session_unset();    }
 
