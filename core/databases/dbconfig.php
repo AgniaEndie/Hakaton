@@ -1,7 +1,7 @@
 <?php
 session_start();
 /**
- *
+ * DB config
  *
  */
 
@@ -12,7 +12,9 @@ $base = "hakaton";
 
 $connect = mysqli_connect($host,$user,$password,$base);
 if(mysqli_connect_error() == null){
-    echo "clean";
+    //echo "clean";
+} else{
+    echo "ошибка в работе сайта, обратитесь к администратору";
 }
 
 ?>
