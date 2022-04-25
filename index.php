@@ -2,7 +2,9 @@
 require_once ("core/databases/dbconfig.php");
 ?>
 
-
+<head>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
 
 <?php
 //Registration
@@ -52,30 +54,43 @@ require_once ("core/databases/dbconfig.php");
 //Auth
     if($_SESSION['user'] == null) {
         if ($_POST['auth'] == "Войти" && $state == null) {
-            $username = $_POST['username'];
-            $password_check = $_POST['password'];
-            $query = "SELECT * FROM `users` WHERE `username` = '$username'";
-            $result = mysqli_query($connect, $query);
+            if (isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response']) {
+                $secret = '6Lfg5JofAAAAAAhpJt0-fVIoYZEVOLTBrMbHeWJt';
+                $ip = $_SERVER['REMOTE_ADDR'];
+                $response = $_POST['g-recaptcha-response'];
+                $rsp = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$ip");
+                $arr = json_decode($rsp, TRUE);
+                if ($arr['success']) {
 
-            $row = mysqli_fetch_row($result);
+                        $username = $_POST['username'];
+                        $password_check = $_POST['password'];
+                        $query = "SELECT * FROM `users` WHERE `username` = '$username'";
+                        $result = mysqli_query($connect, $query);
 
-            $user_db = $row[1];
-            $pass_db = $row[2];
-            $country = $row[3];
-            $status = $row[4];
-            $exp = $row[5];
-            $user_mail = $row[6];
+                        $row = mysqli_fetch_row($result);
 
-
-            $pass = password_verify($password_check, $pass_db);
-            $_SESSION['user'] = $user_db;
-            $_SESSION['email'] = $user_mail;
-            $_SESSION['country'] = $country;
-            $_SESSION['status'] = $status;
-            $_SESSION['exp'] = $exp;
+                        $user_db = $row[1];
+                        $pass_db = $row[2];
+                        $country = $row[3];
+                        $status = $row[4];
+                        $exp = $row[5];
+                        $user_mail = $row[6];
 
 
-        }
+                        $pass = password_verify($password_check, $pass_db);
+                        $_SESSION['user'] = $user_db;
+                        $_SESSION['email'] = $user_mail;
+                        $_SESSION['country'] = $country;
+                        $_SESSION['status'] = $status;
+                        $_SESSION['exp'] = $exp;
+
+                ?>
+                    <meta http-equiv="refresh" content="5">
+                        <?php
+                    }
+                }
+            }
+
 
 //Auth form
 ?>
@@ -84,6 +99,7 @@ require_once ("core/databases/dbconfig.php");
     <input type="text" name="username">
     <input type="password" name="password">
     <input type="submit" value="Войти" name="auth">
+    <div class="g-recaptcha" data-sitekey="6Lfg5JofAAAAANECO5ufRR2vDKcfMkJ31fOFuhbG" style="margin-bottom: 1em"></div>
 </form>
 <?php
     }
