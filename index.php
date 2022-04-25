@@ -210,10 +210,9 @@ require_once ("core/databases/dbconfig.php");
             </form>
         </div>
     </section>
-
-    
-</body>
-</html>
 <?php
     }
         ?>
+    
+</body>
+</html>
