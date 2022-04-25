@@ -26,15 +26,15 @@ require_once ("core/databases/dbconfig.php");
         <div class="header__menu">
         <div class="container">
             <img src="icons/Logo.svg" alt="логотип" class="col-md-1 mt-2 header__logo">
-            <!-- <button class="offset-md-7 col-md-2 button" onclick="window.location.href='#reg'">
+            <button class="offset-md-7 col-md-2 button" onclick="window.location.href='#reg_popub'">
                 Регистрация
             </button>
-            <button class="col-md-2 button" onclick="window.location.href='#authing'">
+            <button class="col-md-2 button" onclick="window.location.href='#auth_popub'">
                 Вход
-            </button> -->
-            <button class="offset-md-7 col-md-3 button button_profile" onclick="window.location.href='profile.php'">
-                Владимир Владимирович
             </button>
+            <!-- <button class="offset-md-7 col-md-3 button button_profile" onclick="window.location.href='profile.php'">
+                Владимир Владимирович
+            </button> -->
         </div>
     </div>
     </header>
@@ -138,7 +138,7 @@ require_once ("core/databases/dbconfig.php");
 
 //registration form
 ?>
-    <section id='reg' class="register">
+    <section id='reg_popub' class="register">
         <div class="container">
             <h2 class="title title_forms">Регистрация</h2>
             <form action="index.php" method="post" id="reg" class="forms">
@@ -149,8 +149,8 @@ require_once ("core/databases/dbconfig.php");
                 <input type="submit" name="reg" value="Зарегистрироваться" id="reg_btn"  class="button button_big">
                 <span id="msgbox"><?php echo $msg; ?></span>
             </form>
-            <a href="#authing" style="margin-top: 20px; text-align: center;">Войти</a>
-            <a href="#" style="margin-top: 5px; text-align: center;">Закрыть</a>
+            <a href="#auth_popub">Войти</a>
+            <a href="#">Закрыть</a>
         </div>
     </section>
     <?php
@@ -201,7 +201,7 @@ require_once ("core/databases/dbconfig.php");
 
 //Auth form
 ?>
-    <section id='authing' class="auth">
+    <section id='auth_popub' class="auth">
         <div class="container">
             <h2 class="title title_forms">Авторизация</h2>
             <form action="index.php" method="post" id="auth" class="forms">
