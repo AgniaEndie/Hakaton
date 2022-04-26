@@ -1,0 +1,32 @@
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+    // color: $main_title;
+    text-transform: uppercase;
+
+    &_forms {
+        font-size: 51.8236px;
+        line-height: 63px;
+        text-align: center;
+        color: #fff;
+    }
+    &_profile-page {
+        padding-bottom: 20px;
+        h3 {
+            text-transform: none;
+            font-size: 31.25px;
+            line-height: 43px;
+            color: $gray6;
+        }
+    }
+
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 12px;
+    }
+}

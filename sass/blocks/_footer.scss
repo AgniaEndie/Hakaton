@@ -1,0 +1,28 @@
+.footer {
+    min-height: 112px;
+    background: #E8B64F;
+    padding: 35px 0;
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 31.6346px;
+        line-height: 39px;
+        text-align: center;
+        color: #FAFAFA;
+
+    }
+    &__img {
+        width: 8%; 
+        display: block; 
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer__img {
+            width: 50%;
+    }
+}

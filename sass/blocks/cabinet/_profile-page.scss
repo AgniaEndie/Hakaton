@@ -1,0 +1,35 @@
+.profile-page {
+    min-height: 843px;
+    &__block {
+        height: 808px;
+        background: $primary_2;
+        border-radius: 14px;
+        margin: 12px;
+        position: relative;
+    }
+    img {
+        display: block;
+        margin: 67px auto;
+    }
+    &__button {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__state {
+        padding: 41px 81px 345px 86px;
+    }
+    &__item {
+        padding: 5px;
+        h3 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 31.25px;
+            line-height: 43px;
+            color: $gray6;
+        }
+    }
+}

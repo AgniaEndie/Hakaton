@@ -1,0 +1,16 @@
+input {
+    margin-top: 25px;
+    padding-left: 30px;
+    background: #FAFAFA;
+    width: 404px;
+    height: 77px;
+    border: none;
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35.2841px;
+    line-height: 43px;
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.22);
+    }
+}
